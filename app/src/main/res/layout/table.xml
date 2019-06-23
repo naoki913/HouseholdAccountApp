@@ -27,6 +27,6 @@
             android:layout_width="83dp"
             android:layout_height="wrap_content"
             android:text="Button"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
 
 </TableRow>

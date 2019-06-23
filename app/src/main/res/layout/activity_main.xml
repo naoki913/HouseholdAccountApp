@@ -6,34 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-    <!--
-        <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:scrollbarAlwaysDrawVerticalTrack="true"
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent">
-            <ScrollView
-                    android:id="@+id/ScrollView01"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent">
 
-                <LinearLayout
-                        xmlns:android="http://schemas.android.com/apk/res/android"
-                        android:orientation="vertical"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent">
-
-
-
-
-                </LinearLayout>
-
-            </ScrollView>
-        </LinearLayout>
-    -->
     <FrameLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="408dp"
@@ -74,6 +47,23 @@
             android:layout_height="wrap_content"
             android:id="@+id/button_add" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.117" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0"/>
+
+    <Button
+            android:text="new_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_genre" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.468" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0"/>
+    <Button
+            android:text="total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_total" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.86" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.0"/>
 
