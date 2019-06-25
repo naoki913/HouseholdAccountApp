@@ -9,8 +9,8 @@
 
     <FrameLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="408dp"
-            android:layout_height="619dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -19,11 +19,16 @@
         <ScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
+            <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
             <TableLayout
                     android:id="@+id/tableLayout"
 
-                    android:layout_width="405dp"
-                    android:layout_height="563dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
@@ -36,13 +41,14 @@
                     android:stretchColumns="1"
                     app:layout_constraintVertical_bias="0.0">
             </TableLayout>
+            </HorizontalScrollView>
         </ScrollView>
 
     </FrameLayout>
 
 
     <Button
-            android:text="add"
+            android:text="追加"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_add" app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +57,7 @@
             app:layout_constraintVertical_bias="0.0"/>
 
     <Button
-            android:text="new_genre"
+            android:text="費目"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_genre" app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +65,7 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.0"/>
     <Button
-            android:text="total"
+            android:text="合計"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_total" app:layout_constraintStart_toStartOf="parent"

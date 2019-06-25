@@ -5,6 +5,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
+import android.text.InputType.TYPE_CLASS_NUMBER
 
 import android.view.View
 import android.view.ViewGroup
@@ -32,8 +33,9 @@ class MainActivity : AppCompatActivity() {
             //spinnerの処理
             ((tr.getChildAt(0))as Spinner).adapter = adapter
             //textviewに文字を格納
-            ((tr.getChildAt(1)) as EditText).setText(k.toString())
-            ((tr.getChildAt(2)) as EditText).setText(k.toString())
+            //((tr.getChildAt(1)) as EditText).setText(k.toString())
+            ((tr.getChildAt(2)) as EditText).setText("0")
+            ((tr.getChildAt(2)) as EditText).setInputType(TYPE_CLASS_NUMBER)
             ((tr.getChildAt(3)) as Button)?.setText("削除")
             //buttonの動的追加と押されたときの処理の記載
             ((tr.getChildAt(3)) as Button)?.setOnClickListener {
@@ -46,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         button_genre.setOnClickListener{
             val myedit = EditText(this)
             val dialog = AlertDialog.Builder(this)
-            dialog.setTitle("文字を入力してください")
+            dialog.setTitle("追加する項目を入力してください")
             dialog.setView(myedit)
             dialog.setPositiveButton("OK", DialogInterface.OnClickListener { _, _ ->
                 // OKボタン押したときの処理
@@ -68,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         button_total.setOnClickListener {
             //ジャンルごとの合計金額の計算
             var sum= arrayListOf(0)
-            for(i in 0..spinnerItems.size-2){
+            for(i in 0..spinnerItems.size-1){
                 sum.add(0)
             }
 
@@ -79,23 +81,17 @@ class MainActivity : AppCompatActivity() {
 
                 for(num in 0..spinnerItems.size-1){
                     if(selectedGenre==spinnerItems.get(num)){
-                        val price:Int=Integer.parseInt(  ((tr.getChildAt(2)) as EditText).text.toString())
-                        sum[num]+=price
+                        val price:Int=Integer.parseInt(((tr.getChildAt(2)) as EditText).text.toString())
+                        sum[num] += price
                     }
                 }
             }
 
-
             //画面遷移
             val intent = Intent(this,TotalActivity::class.java)
             intent.putExtra("SPINNER_ITEMS_KEY",spinnerItems)
-            println("sum="+sum)
             intent.putExtra("SUM_KEY",sum)
-            intent.putExtra("a","b")
 
-            for(i in sum){
-               // println(i)
-            }
             startActivity(intent)
 
 

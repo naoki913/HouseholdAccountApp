@@ -5,26 +5,27 @@
 
     <Spinner
             android:id="@+id/genre_spinner"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
     />
 
 
-
     <EditText
-            android:layout_width="79dp"
-            android:layout_height="46dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal|center"
-            android:textSize="18sp" />
+            android:hint="項目"
+            android:textSize="18sp"/>
     <EditText
-            android:layout_width="79dp"
-            android:layout_height="46dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal|center"
+            android:hint="金額"
             android:textSize="18sp" />
 
     <Button
             android:id="@+id/button_add"
-            android:layout_width="83dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Button"
             android:textSize="18sp"/>

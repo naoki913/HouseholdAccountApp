@@ -18,7 +18,7 @@ class TotalActivity : AppCompatActivity() {
 
         var spinnerItems=intent.getStringArrayListExtra("SPINNER_ITEMS_KEY")
         var sum=intent.getIntegerArrayListExtra("SUM_KEY")
-        println("sum="+sum)
+
         var texts: Array<TextView?> = arrayOfNulls(spinnerItems.size)
         val layout: FrameLayout = findViewById(R.id.totalTableLayout)
 
